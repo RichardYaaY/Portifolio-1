@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*resetando config de margem e padding na página toda*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{ /*Todo o conteúdo visual da página*/
+    height: 100vh;/*100% da tela*/
+    box-sizing: border-box; /*segura os itens dentro da borda do container pai, limita tudo dentro do body*/
+    background-color: black;/*cor de fundo*/
+    color: white; /*cor da fonte*/
+}
+
+.ap_cont_destaque{ /*tag strong*/
+    color: #22d4fd;
+}
+
+.ap{ /*tag main*/
+    display: flex; /*section (col esq) e img (col dir)|flex-direction é row por padrão*/
+    align-items: center; /*alinha os itens no centro vertical*/
+    justify-content: space-between; /*espaço entre as colunas*/
+    margin: 10% 15%; /*topo/fundo - direita/esquerda*/
+}
+
+.ap_cont{ /*tag section - col esq*/
+    display: flex; /*h1 - p - div*/
+    flex-direction: column; 
+    width: 50%; /*section ocupa 50% do espaço da caixa "main"*/
+    gap:40px; /*distanciamento entre os itens contidos na section*/
+}
+
+.ap_cont_titulo{ /*tag h1*/
+    font-family: 'krona one', 'sans-serif'; /*tipo da fonte*/
+    font-size: 36px; /*tamanho da fonte*/
+    font-weight: 100; /*peso da fonte*/
+}
+
+.ap_cont_texto{ /*tag p*/
+    font-family: "montserrat", "sans-serif";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.ap_cont_botoes{ /*tag div*/
+    display: flex; /* 2 caixas - botoes - tag <a>*/
+    flex-direction: row; /*botoes na horizontal*/
+    justify-content: space-between; /*espaço entre as caixas*/
+}
+
+.ap_cont_botoes_links{ /*tag a*/
+    font-family: "montserrat", "sans-serif";
+    font-size: 24px; /*tamanho da fonte*/
+    background-color:#22d4fd; /*cor de fundo do link*/
+    text-align: center; /*centraliza o texto*/
+    text-decoration: none; /*tira as decoracoes/sublinhado do texto*/
+    padding: 21.5px 0;; /*espaço entre o texto e a extremidade do botão*/
+    font-weight: 600; /*peso da fonte*/
+    width: 280px; /*tamanho do botao*/
+    color: black; /*cor da letra*/
+    border-radius: 15px; /*curva da quina do botao*/
+    margin: 50px; /*margem do botao*/
+}
+@media(max-width:1200px){
+    .ap{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .ap_cont{
+        width: auto;
+    }
+}
